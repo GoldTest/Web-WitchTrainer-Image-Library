@@ -1,5 +1,5 @@
 'use strict';
-
+// generate url and Load Url
 var Url = function() {
   // Initializes by reading the URL and loading inside storage
   this.init = function () {
@@ -86,7 +86,7 @@ var UrlStorage = function(defaults, characterName) {
   return this;
 };
 
-/* Singleton object */
+/* Singleton object search impliment */
 var Search = {
   index: lunr(function () {
     this.ref('id');
@@ -109,7 +109,7 @@ var Search = {
     }
   }
 };
-
+// Body view layer  manager
 var BodyshopView = function(bodyshop, characterName, storage) {
   this.init = function(bodyshop, characterName, storage) {
     that.characterName = characterName;
@@ -164,7 +164,7 @@ var BodyshopView = function(bodyshop, characterName, storage) {
   this.init(bodyshop, characterName, storage);
   return this;
 };
-
+// Wardrobe view manager
 var WardrobeView = function(wardrobe, characterName, storage) {
   this.init = function(wardrobe, characterName, storage) {
     that.characterName = characterName;
@@ -262,7 +262,7 @@ var WardrobeView = function(wardrobe, characterName, storage) {
   this.init(wardrobe, characterName, storage);
   return this;
 };
-
+// Trainer Web Library
 var TrainersApp = function() {
   var url = new Url();
   var urlStorage = new UrlStorage(Defaults, url.storage.c);
