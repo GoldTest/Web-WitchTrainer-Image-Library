@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require "json"
+
+db = Hash.new { |h, k| h[k] = h.class.new(&h.default_proc) }
+
+(Dir["*/body/**/*"] + Dir["*/clothes/**/*"]).sort.each do |entry|
+  match = entry.match(%r{^(?<char>[^/]+)/(?<type>[^/]+)/(?<category>[^/]+)/(?<object>.+\.png)}i)
+  next unless match
+
+  object = match[:object].sub(%r{\.png$}, "")
+  next unless object
+
+  if db[match[:type]][match[:char]][match[:category]].kind_of?(Array)
+    db[match[:type]][match[:char]][match[:category]] << object
+  else
+    db[match[:type]][match[:char]][match[:category]] = [object]
+  end
+end
+
+{ body: "Bodyshop", clothes: "Wardrobe" }.each do |type, title|
+  output = "'use strict';\n\nvar #{title} = "
+  output << JSON.pretty_generate(db[type.to_s])
+  File.write("webpage/#{title.downcase}.js", output)
+end

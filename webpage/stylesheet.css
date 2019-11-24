@@ -1,0 +1,172 @@
+@font-face {
+  font-family: CreativeBlockBB;
+  src: url('assets/creativeblockbb_regular.ttf');
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: CreativeBlockBB;
+  src: url('assets/creativeblockbb_bold.ttf');
+}
+
+
+/* When setting the primary font stack, apply it to the Pure grid units along with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use specific font stacks to ensure the greatest OS/browser compatibility. */
+
+html, button, input, select, textarea, .pure-g [class *="pure-u"] {
+  font-family: CreativeBlockBB, Arial, sans-serif;
+  color: #402313;
+}
+
+body {
+  background-color: #555544;
+}
+
+#canvas, .layer {
+  width: 505px;
+  height: 600px;
+}
+
+#canvas {
+  background-color: white;
+  margin: auto;
+}
+
+.layer {
+  position: absolute;
+}
+
+.characters h2 {
+  display: inline-block;
+}
+
+.characters a {
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: 1.4em;
+  display: inline-block;
+}
+
+.bodyshop-item {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+h2 button, h3 button {
+  font-size: 0.7em;
+  vertical-align: top;
+}
+
+.searchbar {
+  text-align: right;
+}
+
+#wardrobe h3 {
+  margin: 5px 0;
+}
+
+.miniature {
+  color: #402313;
+  width: 132px;
+  height: 132px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  margin-right: 2px;
+  background-image: url('assets/box.png');
+  opacity: 0.5;
+}
+
+.miniature.selected, .miniature:hover {
+  opacity: 1;
+}
+
+.miniature:hover img {
+  width: 106px;
+  margin-top: 0px;
+}
+
+.miniature::before {
+  content: attr(title);
+  position: absolute;
+  padding: 18px 17px 0 17px;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 11px;
+}
+
+.miniature img {
+  width: 94px;
+  height: auto;
+  margin: 7px auto;
+  display: block;
+}
+
+.miniature .overwrites {
+  position: absolute;
+  top: 116px;
+  left: 16px;
+}
+
+.miniature .overwrites span {
+  width: 90px;
+  background-color: rgb(105, 63, 30);
+  color: white;
+  font-size: 0.5em;
+  text-align: center;
+  border: 1px solid rgb(105, 63, 30);
+  border-radius: 3px;
+  margin-right: 2px;
+}
+
+.miniature:hover::before {
+  color: #000000;
+}
+
+.miniature::after {
+  content: ' ';
+  position: absolute;
+  bottom: 16px;
+  right: 14px;
+  width: 22px;
+  height: 24px;
+  background-image: url('assets/check_01.png');
+}
+
+.miniature.selected::after {
+  background-image: url('assets/check_02.png');
+}
+
+.miniature:hover::after {
+  background-image: url('assets/check_03.png');
+}
+
+#generated-url {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+.pure-g .l-box {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+#clicky-badge {
+  text-align: right;
+  padding: 2em;
+}
+
+@media (min-width: 80em) {
+  .content {
+    margin-left: 40%;
+  }
+  .sidebar {
+    bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
