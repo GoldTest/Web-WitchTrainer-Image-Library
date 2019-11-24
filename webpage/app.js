@@ -95,7 +95,7 @@ var Search = {
     this.field('file');
     this.field('keywords', { boost: 4 });
   }),
-  fieldEvent: function() {
+  fieldEvent: function () {
     var searchTerms = $.trim($(this).val());
     if (searchTerms === '') {
       $('#wardrobe .miniature').show();
@@ -249,14 +249,14 @@ class WardrobeView {
   }
 }
 // Trainer Web Library
-var TrainersApp = function() {
+var TrainersApp = function () {
   var url = new Url();
   var urlStorage = new UrlStorage(Defaults, url.storage.c);
   var bodyshopView = new BodyshopView(Bodyshop, url.storage.c, urlStorage);
   var wardrobeView = new WardrobeView(Wardrobe, url.storage.c, urlStorage);
 
   $("#generated-url").
-    on('focus', function() {
+    on('focus', function () {
       this.select();
     });
 
