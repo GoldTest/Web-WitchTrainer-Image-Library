@@ -2,7 +2,6 @@
 
 We're trying to organize the big number of bodies and clothes available for various trainers (for now, only for WT, BT & friends).
 
-
 ## Disclaimer
 
 We do not claim ownership nor rights for any of the files stored here. All are considered public use and are simply organised here -- only a few of them were created by our group.
