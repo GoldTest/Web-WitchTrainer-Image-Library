@@ -1,5 +1,7 @@
 'use strict';
 // generate url and Load Url
+// url函数 读取默认URL 同时获取url链接中的 来获取cname 存储在storage中
+
 class Url {
   constructor() {
     // Initializes by reading the URL and loading inside storage
@@ -24,7 +26,7 @@ class Url {
     return this;
   }
 }
-
+//通过url获取到所有的衣服设置 并存储 添加衣柜的add remove方法
 class UrlStorage {
   constructor(defaults, characterName) {
     // Initializes by reading the URL and loading inside storage
