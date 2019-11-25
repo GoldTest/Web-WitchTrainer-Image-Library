@@ -26,7 +26,7 @@ class Url {
     return this;
   }
 }
-//通过url获取到所有的衣服设置 并存储 添加衣柜的add remove方法
+//通过url获取到所有的衣服设置 并分类存储 添加衣柜的add remove方法 添加update方法 
 class UrlStorage {
   constructor(defaults, characterName) {
     // Initializes by reading the URL and loading inside storage
@@ -88,14 +88,18 @@ class UrlStorage {
   }
 }
 
-/* Singleton object search impliment */
+/* Singleton object search implement */
 var Search = {
   index: lunr(function () {
     this.ref('id');
-    this.field('title', { boost: 10 });
+    this.field('title', {
+      boost: 10
+    });
     this.field('category');
     this.field('file');
-    this.field('keywords', { boost: 4 });
+    this.field('keywords', {
+      boost: 4
+    });
   }),
   fieldEvent: function () {
     var searchTerms = $.trim($(this).val());
@@ -111,7 +115,7 @@ var Search = {
     }
   }
 };
-// Body view layer  manager
+// BodyView layer  manager
 class BodyshopView {
   constructor(bodyshop, characterName, storage) {
     this.init = function (bodyshop, characterName, storage) {
@@ -126,10 +130,13 @@ class BodyshopView {
       var category = $this.prop('name');
       var name = $this.prop('value');
       if (name === '-') {
-        $('#' + category).css({ backgroundImage: "none" });
-      }
-      else {
-        $('#' + category).css({ backgroundImage: "url(" + that.itemSrc(category, name) + ")" });
+        $('#' + category).css({
+          backgroundImage: "none"
+        });
+      } else {
+        $('#' + category).css({
+          backgroundImage: "url(" + that.itemSrc(category, name) + ")"
+        });
       }
       that.storage.add(category, name);
     };
@@ -142,13 +149,19 @@ class BodyshopView {
       var containerEl = $('<div></div>', {
         'class': 'bodyshop-item'
       }).appendTo('#bodyshop');
-      $('<label>' + folder + ':</label>', { 'for': folder }).appendTo(containerEl);
+      $('<label>' + folder + ':</label>', {
+        'for': folder
+      }).appendTo(containerEl);
       var selectEl = $('<select name="' + folder + '">' + folder + '</select>').
-        on('change', that.dressItem).
-        appendTo(containerEl);
-      selectEl.append($('<option>-</option>', { 'value': '-' }));
+      on('change', that.dressItem).
+      appendTo(containerEl);
+      selectEl.append($('<option>-</option>', {
+        'value': '-'
+      }));
       for (var item of contents) {
-        var optionEl = $('<option>' + item + '</option>', { 'value': folder + '/' + item });
+        var optionEl = $('<option>' + item + '</option>', {
+          'value': folder + '/' + item
+        });
         if (that.storage.isPresent(folder, item))
           optionEl.prop('selected', true);
         selectEl.append(optionEl);
@@ -177,15 +190,18 @@ class WardrobeView {
     this.dressItem = function (el, category, name) {
       if ($(this).hasClass('selected')) {
         // Clicking an already selected item undresses it
-        $('#' + category).css({ backgroundImage: '' });
+        $('#' + category).css({
+          backgroundImage: ''
+        });
         that.storage.remove(category);
         // Remove selection mark
         $(this).removeClass('selected');
         $('#' + category + '-selection .remove-button').hide();
-      }
-      else {
+      } else {
         // Dresses the item
-        $('#' + category).css({ backgroundImage: "url(" + that.itemSrc(category, name) + ")" });
+        $('#' + category).css({
+          backgroundImage: "url(" + that.itemSrc(category, name) + ")"
+        });
         that.storage.add(category, name);
         // Check for body overwrite
         var splitOptions = name.split("/");
@@ -210,28 +226,42 @@ class WardrobeView {
         return;
       var wardrobeEl = $('#wardrobe');
       var categoryTitleEl = $("<h3>" + folder + " </h3>");
-      var categoryDiv = $('<div></div>', { 'id': folder + '-selection' });
+      var categoryDiv = $('<div></div>', {
+        'id': folder + '-selection'
+      });
       wardrobeEl.append(categoryDiv);
       categoryDiv.append(categoryTitleEl);
       categoryTitleEl.append($("<button class='remove-button'>Remove</button>").on('click', function () {
-        $('#' + folder).css({ backgroundImage: '' });
+        $('#' + folder).css({
+          backgroundImage: ''
+        });
         $(this).hide();
         that.storage.remove(folder);
         $('#' + folder + '-selection .selected').removeClass('selected');
       }).hide());
       for (var item of contents) {
         var title = item.replace(/^([a-z0-9-_.^]+\/)/, "").replace(/_/g, " ");
-        var divEl = $("<div></div>", { 'class': 'miniature', title: title, 'data-category': folder, 'data-file': item }).
-          on('dress', that.dressItem).
-          on('click', function () {
-            var el = $(this);
-            el.trigger('dress', [el.data('category'), el.data('file')]);
-          });
-        $("<img></img>", { src: that.itemSrc(folder, item), title: title }).appendTo(divEl);
+        var divEl = $("<div></div>", {
+          'class': 'miniature',
+          title: title,
+          'data-category': folder,
+          'data-file': item
+        }).
+        on('dress', that.dressItem).
+        on('click', function () {
+          var el = $(this);
+          el.trigger('dress', [el.data('category'), el.data('file')]);
+        });
+        $("<img></img>", {
+          src: that.itemSrc(folder, item),
+          title: title
+        }).appendTo(divEl);
         // Check for body overwrite
         var splitOptions = item.split("/");
         if (splitOptions.length > 1) {
-          var overwrites = $("<div></div>", { class: "overwrites" });
+          var overwrites = $("<div></div>", {
+            class: "overwrites"
+          });
           var splitBodyOptions = splitOptions[0].split('^');
           for (var splitBodyOption of splitBodyOptions) {
             var splitBodyOptionExtracted = splitBodyOption.split(".");
@@ -241,7 +271,12 @@ class WardrobeView {
         }
         if (that.storage.isPresent(folder, item))
           divEl.trigger('dress', [folder, item]);
-        Search.index.add({ id: [folder, item], category: folder, file: item, title: title });
+        Search.index.add({
+          id: [folder, item],
+          category: folder,
+          file: item,
+          title: title
+        });
         categoryDiv.append(divEl);
       }
     };
@@ -258,11 +293,11 @@ var TrainersApp = function () {
   var wardrobeView = new WardrobeView(Wardrobe, url.storage.c, urlStorage);
 
   $("#generated-url").
-    on('focus', function () {
-      this.select();
-    });
+  on('focus', function () {
+    this.select();
+  });
 
   $("#search").
-    on('keyup', Search.fieldEvent).
-    on('change', Search.fieldEvent);
+  on('keyup', Search.fieldEvent).
+  on('change', Search.fieldEvent);
 };
