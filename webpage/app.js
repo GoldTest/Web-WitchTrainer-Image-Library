@@ -287,9 +287,13 @@ class WardrobeView {
 }
 // Trainer Web Library
 var TrainersApp = function () {
+  //默认设置 传入默认衣物defaults 获取默认characterName
   var url = new Url();
+  //获取衣服配置表 添加各种函数实现与功能
   var urlStorage = new UrlStorage(Defaults, url.storage.c);
+  //传入bodyshop配置表 传入characterName，传入urlStorage函数实例
   var bodyshopView = new BodyshopView(Bodyshop, url.storage.c, urlStorage);
+  //传入wardrobe配置表 传入characterName，传入urlStorage实例
   var wardrobeView = new WardrobeView(Wardrobe, url.storage.c, urlStorage);
 
   $("#generated-url").
