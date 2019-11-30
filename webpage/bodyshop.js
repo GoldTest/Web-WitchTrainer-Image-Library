@@ -1160,7 +1160,7 @@ var Bodyshop = {
   },
   "astoria": {
 
-  },
+  },//TODO add body add hermione
   "tonks": {
 
   },

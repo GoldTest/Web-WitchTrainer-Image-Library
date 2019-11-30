@@ -1283,7 +1283,9 @@ var Wardrobe = {
     "skirts": [
       "high_long"
     ]
-  },"astoria": {
+  },//TODO 添加wardrobe add hermion clothes
+  
+  "astoria": {
 
   },
   "tonks": {
