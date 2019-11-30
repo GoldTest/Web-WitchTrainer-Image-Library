@@ -7,9 +7,12 @@ class Url {
     // Initializes by reading the URL and loading inside storage
     this.init = function () {
       that.storage = {};
+      // 获取输入框中默认的原生url
+      
       var url = window.location.search;
       var hash = url.substr(url.indexOf('?') + 1);
-      // Default setting:
+
+      
       if (hash === "")
         hash = 'c=hermione';
       hash.split('&').forEach(function (hashElement) {

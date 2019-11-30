@@ -1,8 +1,8 @@
 'use strict';
 
 var Defaults = {
-  'hermione': //'shirts:tits.pressed/vest_g;' +
-    //'skirts:high_long;' +
+  'hermione': 'shirts:tits.pressed/sports;' +
+    'pants:straight_jeans_belt;' +
     'arms_right:default;' +
     'arms_left:default;' +
     'eyes:brown_default;' +
@@ -12,8 +12,8 @@ var Defaults = {
     'mouth:nude_default;' +
     'tits:default;' +
     'torso:default;' +
-    'genitalia:default;',
-
+    'genitalia:default;' +
+    'hair:stylish_blonde;',
 
   'cho': 'arms_left:default;' +
     'arms_right:default;' +
