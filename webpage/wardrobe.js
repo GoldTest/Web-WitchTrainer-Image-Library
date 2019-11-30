@@ -1283,5 +1283,13 @@ var Wardrobe = {
     "skirts": [
       "high_long"
     ]
-  }
+  },"astoria": {
+
+  },
+  "tonks": {
+
+  },
+  "snape": {
+
+  },
 }

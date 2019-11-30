@@ -1158,7 +1158,16 @@ var Bodyshop = {
       "default"
     ]
   },
-  "voldemort":{
+  "astoria": {
+
+  },
+  "tonks": {
+
+  },
+  "snape": {
+
+  },
+  "voldemort": {
     "shirts": [
       "tits.pressed/vest_h"
     ],
