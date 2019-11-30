@@ -1157,5 +1157,13 @@ var Bodyshop = {
     "torso": [
       "default"
     ]
+  },
+  "voldemort":{
+    "shirts": [
+      "tits.pressed/vest_h"
+    ],
+    "skirts": [
+      "high_long"
+    ]
   }
 }
