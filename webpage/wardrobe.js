@@ -1275,5 +1275,13 @@ var Wardrobe = {
     "skirts": [
       "high_long"
     ]
+  },
+  "voldemort":{
+    "shirts": [
+      "tits.pressed/vest_h"
+    ],
+    "skirts": [
+      "high_long"
+    ]
   }
 }
