@@ -4,13 +4,13 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "D:/Program Files/GitProject/index.html",
+            "name": "Launch Chrome",
+            "url": "D:\\Program Files\\WebProject\\GitProject\\index.html",
             "webRoot": "${workspaceFolder}"
-        }
+        },
+    
     ]
 }
