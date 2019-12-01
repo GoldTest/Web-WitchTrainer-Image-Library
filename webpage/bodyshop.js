@@ -1159,8 +1159,48 @@ var Bodyshop = {
     ]
   },
   "astoria": {
+    "arms_left": [
+      "l_arm_hips",
+      "armfixL"
+    ],
+    "arms_right": [
+      "r_arm_hips",
+      "armfixR"
+    ],
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office"
+    ],
+    "torso": [
+      "base_01",
+    ],
+    "breasts": [
+      "base",
+      "base_right"
+    ],
+    "hair": [
+      "pigtails_blonde_base",
+      "pigtails_blonde_top",
+      "stephanie_base",
+      "stephanie_top",
+      "straight_blonde_base",
+      "straight_blonde_top"
+    ],
+    "head": [
+      "pigtails_blonde",
+      "stephanie_blonde",
+      "straight_blonde"
+    ],
+    "tits": [
+      "base",
+      "base_tight"
+    ]
 
-  },//TODO add body add hermione
+
+  }, //TODO add body add hermione
   "tonks": {
 
   },

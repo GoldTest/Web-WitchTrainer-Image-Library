@@ -117,6 +117,13 @@ var Defaults = {
     'tits:pressed;' +
     'torso:default;',
 
+  'astoria': 'arms_left:l_arm_hips;' +
+    'arms_right:r_arm_hips' +
+    'torso:base_01' +
+    'head:pigtails_blonde' +
+    'tits:base',
+  'tonks': '',
+  'snape': '',
   'voldemort': '',
-  //TODO add defaults
+
 };

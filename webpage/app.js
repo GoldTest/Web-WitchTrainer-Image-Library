@@ -171,13 +171,11 @@ class BodyshopView {
         'for': folder
       }).appendTo(containerEl);
 
-
+/*
       var appid = '20191130000361835';
       var key = 'voLU2kk83J0M2co9PLge';
       var salt = (new Date).getTime();
       var query = folder;
-
-
       var result;
       // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
       var from = 'en';
@@ -201,9 +199,9 @@ class BodyshopView {
               result = data.to;
           } 
       });
-      
+      */
 
-      var selectEl = $('<select name="' + folder + '">' + result + '</select>').
+      var selectEl = $('<select name="' + folder + '">' + folder + '</select>').
       on('change', that.dressItem).
       appendTo(containerEl);
       selectEl.append($('<option>-</option>', {
