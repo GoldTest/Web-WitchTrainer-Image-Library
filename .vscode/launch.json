@@ -3,7 +3,9 @@
     // 悬停以查看现有属性的描述。
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [{
+    "configurations": [
+
+        {
             "type": "node",
             "request": "launch",
             "name": "app.js",
@@ -15,8 +17,15 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
+            "name": "Home Chrome",
             "url": "D:\\Program Files\\WebProject\\GitProject\\index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Company Chrome",
+            "url": "W:\\Program Files\\Git\\Web-WitchTrainer-Image-Library\\index.html",
             "webRoot": "${workspaceFolder}"
         },
     ]

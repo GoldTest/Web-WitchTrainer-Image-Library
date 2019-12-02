@@ -1177,7 +1177,7 @@ var Bodyshop = {
     "torso": [
       "base_01",
     ],
-    "breasts": [
+    "tits": [
       "base",
       "base_right"
     ],

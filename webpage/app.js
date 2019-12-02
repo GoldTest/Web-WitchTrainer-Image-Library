@@ -10,6 +10,8 @@ class Url {
       // 获取输入框中默认的原生url
 
       var url = window.location.search;
+      console.log("windows.search url: "+url);
+      
       var hash = url.substr(url.indexOf('?') + 1);
 
 

@@ -118,10 +118,12 @@ var Defaults = {
     'torso:default;',
 
   'astoria': 'arms_left:l_arm_hips;' +
-    'arms_right:r_arm_hips' +
-    'torso:base_01' +
-    'head:pigtails_blonde' +
-    'tits:base',
+    'arms_right:r_arm_hips;' +
+    'torso:base_01;' +
+    'head:pigtails_blonde;' +
+    'tits:base;' +
+    'hair:stephanie_base;' +
+    'torso:base_01;',
   'tonks': '',
   'snape': '',
   'voldemort': '',
