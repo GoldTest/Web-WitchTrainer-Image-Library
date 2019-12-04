@@ -1,8 +1,8 @@
 'use strict';
 
 var Defaults = {
-  'hermione': //'shirts:tits.pressed/vest_g;' +
-    //'skirts:high_long;' +
+  'hermione': 'shirts:tits.pressed/sports;' +
+    'pants:straight_jeans_belt;' +
     'arms_right:default;' +
     'arms_left:default;' +
     'eyes:brown_default;' +
@@ -12,8 +12,8 @@ var Defaults = {
     'mouth:nude_default;' +
     'tits:default;' +
     'torso:default;' +
-    'genitalia:default;',
-
+    'genitalia:default;' +
+    'hair:stylish_blonde;',
 
   'cho': 'arms_left:default;' +
     'arms_right:default;' +
@@ -117,5 +117,15 @@ var Defaults = {
     'tits:pressed;' +
     'torso:default;',
 
+  'astoria': 'arms_left:l_arm_hips;' +
+    'arms_right:r_arm_hips;' +
+    'torso:base_01;' +
+    'head:pigtails_blonde;' +
+    'tits:base;' +
+    'hair:stephanie_base;' +
+    'torso:base_01;',
+  'tonks': '',
+  'snape': '',
   'voldemort': '',
+
 };

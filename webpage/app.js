@@ -7,9 +7,14 @@ class Url {
     // Initializes by reading the URL and loading inside storage
     this.init = function () {
       that.storage = {};
+      // 获取输入框中默认的原生url
+
       var url = window.location.search;
+      console.log("windows.search url: "+url);
+      
       var hash = url.substr(url.indexOf('?') + 1);
-      // Default setting:
+
+
       if (hash === "")
         hash = 'c=hermione';
       hash.split('&').forEach(function (hashElement) {
@@ -17,6 +22,10 @@ class Url {
           var keyPair = hashElement.split('=');
           if (keyPair[0] && keyPair[1] && keyPair[0] !== '')
             that.storage[keyPair[0]] = keyPair[1];
+      
+          //window.print(that.keyPair);
+          //window.print(that.keyPair);
+          //真打印啊。。
         }
       });
       return that.storage;
@@ -32,19 +41,27 @@ class UrlStorage {
     // Initializes by reading the URL and loading inside storage
     this.init = function (characterName) {
       that.characterName = characterName;
+
       that.storage = {};
       var url = window.location.hash;
       var hash = url.substr(url.indexOf('#') + 1);
+      console.log("defaults数组中的配置:" + defaults['hermione']);
+      console.log("name:" + characterName);
+      console.log("url:" + url);
+      console.log("hash1:" + hash);
+
       // Default setting:
       if (hash === "") {
         hash = defaults[characterName];
       }
+      console.log("hash2 取到的值:" + hash);
       if (hash !== undefined) {
         hash.split(';').forEach(function (hashElement) {
           if (hashElement.indexOf(':') > 0) {
             var keyPair = hashElement.split(':');
             if (keyPair[0] && keyPair[1] && keyPair[0] !== '')
               that.storage[keyPair[0]] = keyPair[1];
+            console.log("便利hash2: " + keyPair[0] + ": " + keyPair[1]);
           }
         });
       }
@@ -115,13 +132,16 @@ var Search = {
     }
   }
 };
-// BodyView layer  manager
+// BodyshopView layer  manager
 class BodyshopView {
   constructor(bodyshop, characterName, storage) {
     this.init = function (bodyshop, characterName, storage) {
       that.characterName = characterName;
       that.storage = storage;
+      //console.log("bodyview: " + bodyshop['hermione']['arms_left']);
+      var n = 0;
       for (var key in bodyshop[that.characterName]) {
+        console.log("bodyview key " + n++ + " :" + bodyshop[that.characterName][key]);
         that.loadCategory(bodyshop[that.characterName][key], key);
       }
     };
@@ -152,6 +172,37 @@ class BodyshopView {
       $('<label>' + folder + ':</label>', {
         'for': folder
       }).appendTo(containerEl);
+
+/*
+      var appid = '20191130000361835';
+      var key = 'voLU2kk83J0M2co9PLge';
+      var salt = (new Date).getTime();
+      var query = folder;
+      var result;
+      // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+      var from = 'en';
+      var to = 'zh';
+      var str1 = appid + query + salt +key;
+      var sign = MD5(str1);
+      $.ajax({
+          url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+          type: 'get',
+          dataType: 'jsonp',
+          data: {
+              q: query,
+              appid: appid,
+              salt: salt,
+              from: from,
+              to: to,
+              sign: sign
+          },
+          success: function (data) {
+              console.log(data);
+              result = data.to;
+          } 
+      });
+      */
+
       var selectEl = $('<select name="' + folder + '">' + folder + '</select>').
       on('change', that.dressItem).
       appendTo(containerEl);
@@ -180,8 +231,13 @@ class WardrobeView {
     this.init = function (wardrobe, characterName, storage) {
       that.characterName = characterName;
       that.storage = storage;
+      var n = 0;
       for (var key in wardrobe[that.characterName]) {
+        var n;
         that.loadCategory(wardrobe[that.characterName][key], key);
+        console.log("key " + n++ + " :" + key);
+
+
       }
       $('.remove-all-button').on('click', function () {
         $('.remove-button').trigger('click');
@@ -222,6 +278,7 @@ class WardrobeView {
       return that.characterName + '/clothes/' + category + '/' + name + '.png';
     };
     this.loadCategory = function (contents, folder) {
+
       if (contents.length === 0)
         return;
       var wardrobeEl = $('#wardrobe');
@@ -231,7 +288,7 @@ class WardrobeView {
       });
       wardrobeEl.append(categoryDiv);
       categoryDiv.append(categoryTitleEl);
-      categoryTitleEl.append($("<button class='remove-button'>Remove</button>").on('click', function () {
+      categoryTitleEl.append($("<button class='remove-button'>脱掉</button>").on('click', function () {
         $('#' + folder).css({
           backgroundImage: ''
         });
@@ -239,7 +296,12 @@ class WardrobeView {
         that.storage.remove(folder);
         $('#' + folder + '-selection .selected').removeClass('selected');
       }).hide());
+
+
+
       for (var item of contents) {
+
+
         var title = item.replace(/^([a-z0-9-_.^]+\/)/, "").replace(/_/g, " ");
         var divEl = $("<div></div>", {
           'class': 'miniature',
@@ -289,10 +351,10 @@ class WardrobeView {
 var TrainersApp = function () {
   //默认设置 传入默认衣物defaults 获取默认characterName
   var url = new Url();
-  
+
   //获取衣服配置表 添加各种函数实现与功能
   var urlStorage = new UrlStorage(Defaults, url.storage.c);
-  
+
   //传入bodyshop配置表 传入characterName，传入urlStorage函数实例
   var bodyshopView = new BodyshopView(Bodyshop, url.storage.c, urlStorage);
 

@@ -2,7 +2,7 @@
 
 <head>
   <title>调教赫敏WTSilver-图库</title>
-
+  <meta name='author' content='http://github.com/GoldTest'>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="webpage/assets/apple-touch-icon-57x57.png" />
@@ -59,15 +59,16 @@
 
 
     <div class="sidebar pure-u-1 pure-u-md-1 pure-u-xl-2-5">
-      <!-- canvas画布 人物主体-->
+      <!-- canvas画布 人物主体 层级取决于这里的设置-->
+
+     <!-- hair must be before torso-->
       <div id="canvas">
         <div class="layer body" id="backdrops"></div>
         <div class="layer body" id="layerhair"></div>
         <div class="layer body" id="head"></div>
         <div class="layer body" id="eyes"></div>
         <div class="layer body" id="tattoo_head"></div>
-        <div class="layer body" id="hair"></div>
-        <!-- hair must be before torso -->
+        <div class="layer body" id="hair"></div> 
         <div class="layer clothes" id="toys_anal"></div>
         <div class="layer body" id="arms_right"></div>
         <div class="layer body" id="torso"></div>
@@ -126,7 +127,7 @@
         <form class="pure-form pure-form-stacked" onsubmit="return false">
           <fieldset>
             <div class="pure-control-group">
-              <label for="generated-url">Copy this URL to share your options:</label>
+              <label for="generated-url">复制链接来分享你的配置:</label>
               <input type="text" id="generated-url" name="generated-url" readonly class="pure-input-1" />
             </div>
             <div id="bodyshop"></div>
@@ -148,8 +149,11 @@
         <a href="index.html?c=susan">苏珊</a>
         <a href="index.html?c=jasmine">贾思敏</a>
         <a href="index.html?c=lola">劳拉</a>
+        <a href="index.html?c=astoria">奥斯托利亚</a>
+        <a href="index.html?c=tonks">唐克斯</a>
+        <a href="index.html?c=tonks">斯内普</a>
+        <a href="index.html?c=tonks">伏地魔</a>
         <a href="index.html?c=genie">精灵</a>
-        <a href="index.html?c=voldemort">伏地魔</a>
       </div>
     </div>
     <!-- 搜索框 -->
@@ -159,7 +163,7 @@
           衣柜 <button class="remove-all-button">全部脱光</button>
         </h2>
         <p class="searchbar">
-          <input id="search" type="text" placeholder="Search wardrobe..." />
+          <input id="search" type="text" placeholder="搜索图库..." />
         </p>
       </div>
     </div>
