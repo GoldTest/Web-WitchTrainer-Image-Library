@@ -655,12 +655,10 @@ var Wardrobe = {
       "wand_only",
       "wash_cloth"
     ],
-    //魔法界面
     "magic": [
       "tits.default/nipples",
       "tits.default/tentacles"
     ],
-    //脖子
     "neck": [
       "azkaban_shackle",
       "bondage_collar",
@@ -1275,5 +1273,24 @@ var Wardrobe = {
     "skirts": [
       "high_long"
     ]
-  }
+  },
+  //TODO 添加wardrobe add hermion clothes
+
+  "astoria": {
+
+  },
+  "tonks": {
+
+  },
+  "snape": {
+
+  },
+  "voldemort": {
+    "shirts": [
+      "tits.pressed/vest_h"
+    ],
+    "skirts": [
+      "high_long"
+    ]
+  },
 }

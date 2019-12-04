@@ -1,31 +1,27 @@
 <html>
 
 <head>
-  <title>Trainer's image library</title>
-  <!-- TODO 简单的标记 #需求 #bug-->
-
-  <!-- FIXME 此处记得修复-->
-
-  <meta name="author" content="http://github.com/GoldTest" />
+  <title>调教赫敏WTSilver-图库</title>
+  <meta name='author' content='http://github.com/GoldTest'>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" />
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="apple-touch-icon" sizes="57x57" href="webpage/assets/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="webpage/assets/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="webpage/assets/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="webpage/assets/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="webpage/assets/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="webpage/assets/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="webpage/assets/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="webpage/assets/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="webpage/assets/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="webpage/assets/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="webpage/assets/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="webpage/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="webpage/assets/favicon-16x16.png" sizes="16x16" />
+  <link rel="manifest" href="webpage/assets/manifest.json" />
+  <link rel="mask-icon" href="webpage/assets/safari-pinned-tab.svg" color="#5bbad5" />
   <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  <meta name="msapplication-TileImage" content="webpage/assets/mstile-144x144.png" />
   <meta name="theme-color" content="#555545" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@1.0.0/build/pure-min.css" />
@@ -46,27 +42,33 @@
     <!-- Title of Witch Trainer-->
     <div class="pure-u-1 pure-u-xl-3-5">
       <div class="l-box">
-        <h1>Trainer's image library Web Version</h1>
+        <h1>调教赫敏WTSilver Mod版本网页版图库</h1>
         <p>
-          <strong>Help us</strong> to add new clothes and accessories at
-          <a href="https://github.com/GoldTest/WitchTrainer-Image-Library-Web">WitchTrainer-Image-Library-Web</a>. We
-          recommend using the
-          <a href="https://www.google.com/chrome/">Chrome</a> or
+          在
+          <strong>Github开源项目</strong>上添加新衣服或者新配饰请点击
+          <a href="https://github.com/GoldTest/WitchTrainer-Image-Library-Web">开源项目</a>.
+
+        </p>
+        <p>
+          请使用以下两种浏览器:
+          <a href="https://www.google.com/chrome/">Chrome</a> 或者
           <a href="https://www.mozilla.org">Firefox</a>.
         </p>
       </div>
     </div>
 
-    <!-- Body and clothes canvas-->
+
     <div class="sidebar pure-u-1 pure-u-md-1 pure-u-xl-2-5">
+      <!-- canvas画布 人物主体 层级取决于这里的设置-->
+
+     <!-- hair must be before torso-->
       <div id="canvas">
         <div class="layer body" id="backdrops"></div>
         <div class="layer body" id="layerhair"></div>
         <div class="layer body" id="head"></div>
         <div class="layer body" id="eyes"></div>
         <div class="layer body" id="tattoo_head"></div>
-        <div class="layer body" id="hair"></div>
-        <!-- hair must be before torso -->
+        <div class="layer body" id="hair"></div> 
         <div class="layer clothes" id="toys_anal"></div>
         <div class="layer body" id="arms_right"></div>
         <div class="layer body" id="torso"></div>
@@ -120,12 +122,12 @@
         <div class="layer clothes" id="magic"></div>
         <div class="layer body" id="emotions"></div>
       </div>
-
+      <!-- 左侧默认配置文件-->
       <div class="l-box">
         <form class="pure-form pure-form-stacked" onsubmit="return false">
           <fieldset>
             <div class="pure-control-group">
-              <label for="generated-url">Copy this URL to share your options:</label>
+              <label for="generated-url">复制链接来分享你的配置:</label>
               <input type="text" id="generated-url" name="generated-url" readonly class="pure-input-1" />
             </div>
             <div id="bodyshop"></div>
@@ -133,33 +135,39 @@
         </form>
       </div>
     </div>
-    <!-- Character select bar-->
+
+
+    <!-- 角色选择bar-->
     <div class="content pure-u-1 pure-u-xl-3-5">
       <div class="l-box characters">
-        <h2>Character</h2>
-        <a href="index.html">Hermione</a>
-        <a href="index.html?c=cho">Cho</a>
-        <a href="index.html?c=daphne">Daphne</a>
-        <a href="index.html?c=ginny">Ginny</a>
-        <a href="index.html?c=luna">Luna</a>
-        <a href="index.html?c=susan">Susan</a>
-        <a href="index.html?c=jasmine">Jasmine</a>
-        <a href="index.html?c=lola">Lola</a>
-        <a href="index.html?c=genie">Genie</a>
+        <h2>选择角色</h2>
+        <a href="index.html">赫敏</a>
+        <a href="index.html?c=cho">秋</a>
+        <a href="index.html?c=daphne">达芙妮</a>
+        <a href="index.html?c=ginny">金妮</a>
+        <a href="index.html?c=luna">露娜</a>
+        <a href="index.html?c=susan">苏珊</a>
+        <a href="index.html?c=jasmine">贾思敏</a>
+        <a href="index.html?c=lola">劳拉</a>
+        <a href="index.html?c=astoria">奥斯托利亚</a>
+        <a href="index.html?c=tonks">唐克斯</a>
+        <a href="index.html?c=tonks">斯内普</a>
+        <a href="index.html?c=tonks">伏地魔</a>
+        <a href="index.html?c=genie">精灵</a>
       </div>
     </div>
-    <!-- Search Bar-->
+    <!-- 搜索框 -->
     <div class="content pure-u-1 pure-u-xl-3-5">
       <div class="l-box">
         <h2>
-          Wardrobe <button class="remove-all-button">Strip naked</button>
+          衣柜 <button class="remove-all-button">全部脱光</button>
         </h2>
         <p class="searchbar">
-          <input id="search" type="text" placeholder="Search wardrobe..." />
+          <input id="search" type="text" placeholder="搜索图库..." />
         </p>
       </div>
     </div>
-    <!-- Wardrobe of character-->
+    <!-- 衣柜 -->
     <div class="content pure-u-1 pure-u-xl-3-5">
       <div class="l-box">
         <form class="pure-form" onsubmit="return false">

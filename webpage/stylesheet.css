@@ -12,7 +12,12 @@
 
 /* When setting the primary font stack, apply it to the Pure grid units along with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use specific font stacks to ensure the greatest OS/browser compatibility. */
 
-html, button, input, select, textarea, .pure-g [class *="pure-u"] {
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *="pure-u"] {
   font-family: CreativeBlockBB, Arial, sans-serif;
   color: #402313;
 }
@@ -21,7 +26,27 @@ body {
   background-color: #555544;
 }
 
-#canvas, .layer {
+/* #555544 此处只有id= canvas 下面的class= layer才生效
+.example .pp{
+  color: orange;
+}
+.example.pp2 {
+  color: green;
+}
+如上面的两个定义一个是中间有空格，一个是中间没空格。
+
+第一个class要这样写生效：<p class="example">文字文字<span class="pp">pp这个class生效</span>....</p>
+第二个class要这样写生效：<p class="example pp2">pp2这个class生效</p>
+.example .pp = E F 是后代选择器。
+
+.example.pp2 则是在一个元素上，这个元素包括这两个类才会有效果。
+
+.example .pp中间用空格隔开，表示后代选择器，选择的是.example内的.pp。
+*/
+
+/*画布整体与画布内部的layer*/
+#canvas,
+.layer {
   width: 505px;
   height: 600px;
 }
@@ -35,6 +60,7 @@ body {
   position: absolute;
 }
 
+/*选择角色相关*/
 .characters h2 {
   display: inline-block;
 }
@@ -46,12 +72,15 @@ body {
   display: inline-block;
 }
 
+/*bodyshop相关*/
 .bodyshop-item {
   display: inline-block;
   margin-left: 10px;
 }
 
-h2 button, h3 button {
+/*h2按钮*/
+h2 button,
+h3 button {
   font-size: 0.7em;
   vertical-align: top;
 }
@@ -60,12 +89,16 @@ h2 button, h3 button {
   text-align: right;
 }
 
+
+/*衣柜相关*/
 #wardrobe h3 {
   margin: 5px 0;
 }
 
+/*每个衣柜内部的item*/
 .miniature {
   color: #402313;
+  /*background-color: green;*/
   width: 132px;
   height: 132px;
   display: inline-block;
@@ -76,8 +109,11 @@ h2 button, h3 button {
   opacity: 0.5;
 }
 
-.miniature.selected, .miniature:hover {
+/*鼠标浮动hover*/
+.miniature.selected,
+.miniature:hover {
   opacity: 1;
+  /*background-color: green;*/
 }
 
 .miniature:hover img {
@@ -85,6 +121,7 @@ h2 button, h3 button {
   margin-top: 0px;
 }
 
+/*内部img*/
 .miniature::before {
   content: attr(title);
   position: absolute;
@@ -142,6 +179,8 @@ h2 button, h3 button {
   background-image: url('assets/check_03.png');
 }
 
+
+/*生成的url设置*/
 #generated-url {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.8em;
@@ -161,6 +200,7 @@ h2 button, h3 button {
   .content {
     margin-left: 40%;
   }
+
   .sidebar {
     bottom: 0;
     position: fixed;
