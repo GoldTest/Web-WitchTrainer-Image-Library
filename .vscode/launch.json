@@ -18,7 +18,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Home Chrome",
-            "url": "D:\\Program Files\\WebProject\\GitProject\\index.html",
+            "url": "D:\\Program Files\\WebProject\\Web-WitchTrainer-Image-Library\\index.html",
             "webRoot": "${workspaceFolder}"
         },
         {
