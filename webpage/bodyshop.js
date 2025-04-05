@@ -9,6 +9,16 @@ var Bodyshop = {
     "arms_right": [
       "default"
     ],
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
+    ],
     "eyes": [
       "brown_default",
       "brown_surprised"
@@ -67,7 +77,10 @@ var Bodyshop = {
       "dungeon",
       "forbidden_forest",
       "hogsmeade",
-      "office"
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
     ],
     "cheeks": [
       "blush",
@@ -133,6 +146,16 @@ var Bodyshop = {
     ],
     "arms_right": [
       "default"
+    ],
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
     ],
     "genitalia": [
       "default"
@@ -508,7 +531,10 @@ var Bodyshop = {
       "dungeon",
       "forbidden_forest",
       "hogsmeade",
-      "office"
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
     ],
     "belly": [
       "6_months",
@@ -902,6 +928,16 @@ var Bodyshop = {
     "arms_right": [
       "default"
     ],
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
+    ],
     "belly": [
       "pregnant"
     ],
@@ -958,6 +994,16 @@ var Bodyshop = {
     "arms_right": [
       "default"
     ],
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
+    ],
     "belly": [
       "pregnant"
     ],
@@ -1010,7 +1056,10 @@ var Bodyshop = {
       "dungeon",
       "forbidden_forest",
       "hogsmeade",
-      "office"
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
     ],
     "cheeks": [
       "blush",
@@ -1130,6 +1179,16 @@ var Bodyshop = {
     "arms_right": [
       "default"
     ],
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
+    ],
     "eyes": [
       "green_default"
     ],
@@ -1172,14 +1231,13 @@ var Bodyshop = {
       "dungeon",
       "forbidden_forest",
       "hogsmeade",
-      "office"
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
     ],
     "torso": [
       "base_01",
-    ],
-    "tits": [
-      "base",
-      "base_right"
     ],
     "hair": [
       "pigtails_blonde_base",
@@ -1200,14 +1258,44 @@ var Bodyshop = {
     ]
 
 
-  }, //TODO add body add hermione
+  },
   "tonks": {
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
+    ],
 
   },
   "snape": {
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
+    ],
 
   },
   "voldemort": {
+    "backdrops": [
+      "dormitory",
+      "dungeon",
+      "forbidden_forest",
+      "hogsmeade",
+      "office",
+      "bathroom",
+      "castle_grounds",
+      "yule_ball"
+    ],
     "shirts": [
       "tits.pressed/vest_h"
     ],

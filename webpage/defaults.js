@@ -16,7 +16,8 @@ var Defaults = {
     'genitalia:default;' +
     'hair:stylish_blonde;',
 
-  'cho': 'arms_left:default;' +
+  'cho': 'backdrops:dormitory;' +
+    'arms_left:default;' +
     'arms_right:default;' +
     'eyes:brown_default;' +
     'hair:default;' +
@@ -29,7 +30,8 @@ var Defaults = {
     'skirts:high_long;' +
     'shirts:tits.default/vest_r;',
 
-  'daphne': 'shirts:tits.default/uniform;' +
+  'daphne': 'backdrops:dormitory;' +
+    'shirts:tits.default/uniform;' +
     'skirts:uniform;' +
     'arms_right:default;' +
     'arms_left:default;' +
@@ -43,7 +45,8 @@ var Defaults = {
     'legs:default;' +
     'head:default;',
 
-  'genie': 'pants:default;' +
+  'genie': 'backdrops:dormitory;' +
+    'pants:default;' +
     'arms_right:default;' +
     'arms_left:default;' +
     'head:default;' +
@@ -51,7 +54,8 @@ var Defaults = {
     'pubic_hair:default;torso:default;' +
     'genitalia:default;',
 
-  'ginny': 'shirts:tits.pressed/vest_g;' +
+  'ginny': 'backdrops:dormitory;' +
+    'shirts:tits.pressed/vest_g;' +
     'skirts:high_long;' +
     'arms_right:default;' +
     'arms_left:default;' +
@@ -65,7 +69,8 @@ var Defaults = {
     'torso:default;' +
     'genitalia:default;',
 
-  'jasmine': 'shirts:default;' +
+  'jasmine': 'backdrops:dormitory;' +
+    'shirts:default;' +
     'pants:default;' +
     'headgear:veil;' +
     'arms_right:default;' +
@@ -78,7 +83,8 @@ var Defaults = {
     'tits:default;' +
     'torso:default;',
 
-  'lola': 'shirts:default_long;' +
+  'lola': 'backdrops:dormitory;' +
+    'shirts:default_long;' +
     'skirts:default;' +
     'arms_left:default;' +
     'arms_right:default;' +
@@ -90,7 +96,8 @@ var Defaults = {
     'tits:default;' +
     'torso:default;',
 
-  'luna': 'shirts:tits.pressed/vest_r;' +
+  'luna': 'backdrops:dormitory;' +
+    'shirts:tits.pressed/vest_r;' +
     'skirts:high_long;' +
     'arms_right:default;' +
     'arms_left:default;' +
@@ -105,7 +112,8 @@ var Defaults = {
     'torso:default;' +
     'genitalia:default;',
 
-  'susan': 'shirts:tits.pressed/vest_h;' +
+  'susan': 'backdrops:dormitory;' +
+    'shirts:tits.pressed/vest_h;' +
     'skirts:high_long;' +
     'arms_left:default;' +
     'arms_right:default;' +
@@ -118,15 +126,16 @@ var Defaults = {
     'tits:pressed;' +
     'torso:default;',
 
-  'astoria': 'arms_left:l_arm_hips;' +
+  'astoria': 'backdrops:dormitory;' +
+    'arms_left:l_arm_hips;' +
     'arms_right:r_arm_hips;' +
     'torso:base_01;' +
     'head:pigtails_blonde;' +
     'tits:base;' +
     'hair:stephanie_base;' +
     'torso:base_01;',
-  'tonks': '',
-  'snape': '',
-  'voldemort': '',
 
+  'tonks': 'backdrops:dormitory;',
+  'snape': 'backdrops:dormitory;',
+  'voldemort': 'backdrops:dormitory;',
 };
