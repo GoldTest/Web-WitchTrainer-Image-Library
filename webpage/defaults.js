@@ -1,7 +1,8 @@
 'use strict';
 
 var Defaults = {
-  'hermione': 'shirts:tits.pressed/sports;' +
+  'hermione': 'backdrops:dormitory;' +
+    'shirts:tits.pressed/sports;' +
     'pants:straight_jeans_belt;' +
     'arms_right:default;' +
     'arms_left:default;' +
