@@ -1274,7 +1274,6 @@ var Wardrobe = {
       "high_long"
     ]
   },
-  //TODO 添加wardrobe add hermion clothes
 
   "astoria": {
 

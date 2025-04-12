@@ -7,7 +7,7 @@ var Defaults = {
     'arms_right:default;' +
     'arms_left:default;' +
     'eyes:brown_default;' +
-    'hair:wavy_brown;' +
+    'hair:wavy_brown_pink_highlights;' +
     'head:default;' +
     'legs:default;' +
     'mouth:nude_default;' +
